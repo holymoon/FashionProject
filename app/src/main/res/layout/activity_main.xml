@@ -8,30 +8,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="left">
-
-
+        <TextView
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/action_bar_title"
+            android:text="COLOR CIRCLE"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/color"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:background="#FFFFFF"
+        android:background="@color/colorWhite"
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="260dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/recycler"/>
 
-
-
-
-
-
     </LinearLayout>
-
-
 </androidx.drawerlayout.widget.DrawerLayout>

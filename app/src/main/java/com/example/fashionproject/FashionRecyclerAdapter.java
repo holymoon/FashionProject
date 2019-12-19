@@ -1,10 +1,12 @@
 package com.example.fashionproject;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,9 +30,26 @@ public class FashionRecyclerAdapter extends RecyclerView.Adapter<FashionRecycler
     public void onBindViewHolder(@NonNull FashionRecyclerViewHolder holder, int position) {
 
              holder.btnName.setText(myList.get(position));
+        if(holder.btnName.getText()=="Women"){
+
+            holder.btnName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(),WomenActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
+        } if(holder.btnName.getText() == "Men"){
+            holder.btnName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(v.getContext(),MenActivity.class);
+                    v.getContext().startActivity(i);
+                }
+            });
+        }
 
     }
-
     @Override
     public int getItemCount() {
         return myList.size();

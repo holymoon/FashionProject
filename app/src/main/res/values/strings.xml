@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FashionProject</string>
+    <string name="q2_name">title</string>
+    <string name="fashion">Fashion</string>
 </resources>
