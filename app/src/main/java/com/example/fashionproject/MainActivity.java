@@ -11,18 +11,20 @@ import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.TextView;
 
 
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
-
+    TextView action_bar_title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getActionBar();
-
+        action_bar_title=findViewById(R.id.action_bar_title);
+        action_bar_title.animate().alpha(0).setDuration(2000).start();
 
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         RecyclerView recycler = findViewById(R.id.recycler);
