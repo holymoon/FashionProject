@@ -2,9 +2,6 @@ package com.example.fashionproject;
 
 import android.app.Activity;
 import android.os.Bundle;
-
-
-
 public class WomenActivity extends Activity {
 
     @Override
@@ -13,10 +10,12 @@ public class WomenActivity extends Activity {
         setContentView(R.layout.activity_women);
 
 
-
-
     }
+
+
 }
+
+
 
 
 
